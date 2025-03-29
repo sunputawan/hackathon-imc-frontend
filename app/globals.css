@@ -17,13 +17,31 @@
 @theme {
   --font-digital-disco: "DigitalDisco", sans-serif;
   --color-custom-blue: #0356D1;
-  --bg-images: url('/images/country.png')
+  --color-custom-light-blue: #ACCBD7;
+  --color-custom-light-gray: #D9D9D9;
+  --color-custom-dark-gray: #606060;
+  --color-custom-yellow: #FFC46B;
+  --bg-images: url('/images/country.png');
 
-  --foreground: #ffffff;
+  --foreground: #FFFFFF;
 }
 
 body {
-  background: var(--background);
+  @apply bg-[url('/images/bgHome.png')] bg-cover bg-no-repeat bg-center;
   color: var(--foreground);
   font-family: DigitalDisco, sans-serif;
+}
+
+.text-border {
+  text-shadow: 
+    3px 3px 0px rgba(30, 52, 69, 1),
+    -3px 3px 0px rgba(30, 52, 69, 1),
+    3px -3px 0px rgba(30, 52, 69, 1), 
+    -3px -3px 0px rgba(30, 52, 69, 1);
+}
+
+
+.button:active {
+  @apply scale-110;
+  transition: transform 0.3s ease-out;
 }

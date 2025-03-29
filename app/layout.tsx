@@ -1,15 +1,12 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { FooterProvider } from "@/components/FooterContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -25,9 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} overflow-x-hidden`}>
-      <body className="min-h-screen w-full flex flex-col overflow-x-hidden overscroll-none">
-        {children}
-        <Footer />
+      <body className="relative min-h-screen w-full flex flex-col overflow-x-hidden overscroll-none">
+        <FooterProvider>
+          <div 
+            className="absolute h-screen bg-cover bg-no-repeat bg-center w-full -z-20"
+            style={{ backgroundImage: "url('images/bgHome.png')"}}
+          />
+          {children}
+          <Footer />
+        </FooterProvider>
       </body>
     </html>
   );
