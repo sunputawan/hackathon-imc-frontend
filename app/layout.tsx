@@ -26,7 +26,7 @@ export default function RootLayout({
         <FooterProvider>
           <div 
             className="absolute h-screen bg-cover bg-no-repeat bg-center w-full -z-20"
-            style={{ backgroundImage: "url('images/bgHome.png')"}}
+            style={{ backgroundImage: "url('/images/bgHome.png')"}}
           />
           {children}
           <Footer />

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react'
 import { useFooter } from './FooterContext';
 import { usePathname, useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 const route = [
     {image: "/images/icon-home.png", path: "/home"},

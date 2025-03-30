@@ -22,10 +22,10 @@ const SkillPage = () => {
         label: label,
         image: "/images/badge/1.png",
         child: [
-            {label: "Identifying Solution", image: "/images/bade/2.png"},
-            {label: "Logical Thinking", image: "/images/bade/3.png"},
-            {label: "Resourcefulness", image: "/images/bade/4.png"},
-            {label: "Critical Action", image: "/images/bade/5.png"},
+            {label: "Identifying Solution", image: "/images/badge/2.png"},
+            {label: "Logical Thinking", image: "/images/badge/3.png"},
+            {label: "Resourcefulness", image: "/images/badge/4.png"},
+            {label: "Critical Action", image: "/images/badge/5.png"},
         ]
     });
     useEffect(() => {

@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 import { HardSkillsSection } from "./components/HardSkillsSection";
-import { SkillGroup } from "../components/SkillGroup";
 
 function SkillTree() {
   return (

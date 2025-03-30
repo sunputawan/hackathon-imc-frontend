@@ -1,3 +1,6 @@
+"use client"
+
+import { useRouter } from "next/navigation";
 import * as React from "react";
 
 interface SkillGroupProps {
@@ -11,16 +14,18 @@ export const SkillGroup: React.FC<SkillGroupProps> = ({
   className = "",
   imageClassName = "",
 }) => {
-  return (
-    <div className={`flex gap-5 ${className}`}>
-      {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Skill icon ${index + 1}`}
-          className={`object-contain shrink-0 aspect-square ${imageClassName}`}
-        />
-      ))}
-    </div>
-  );
+    const router = useRouter();
+    return (
+        <div className={`flex gap-5 ${className}`}>
+        {images.map((src, index) => (
+            <img
+            key={index}
+            src={src}
+            onClick={() => router.push("/play/soft-skill-tree/problem-solving")}
+            alt={`Skill icon ${index + 1}`}
+            className={`object-contain shrink-0 aspect-square button ${imageClassName}`}
+            />
+        ))}
+        </div>
+    );
 };

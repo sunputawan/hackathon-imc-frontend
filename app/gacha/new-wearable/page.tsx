@@ -14,7 +14,7 @@ const NewItem = () => {
   const router = useRouter();
   const [animated, setAnimated] = useState(false);
   const [newWearable, setNewWearable] = useState<NewWearable>({
-    image: "/",
+    image: "/images/sword.png",
     name: "SWORD-1",
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat sit?",
   });
@@ -43,7 +43,7 @@ const NewItem = () => {
         alt="new-wearable"
         width={280}
         height={280}
-        className={`bg-white mx-auto mt-32 ${
+        className={`mx-auto mt-32 ${
           animated ? "opacity-100 scale-100" : "opacity-0 scale-95"
         } transition-all duration-[3s] ease-out`}
       />
