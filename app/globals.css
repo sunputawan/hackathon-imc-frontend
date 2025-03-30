@@ -40,6 +40,11 @@ body {
     -3px -3px 0px rgba(30, 52, 69, 1);
 }
 
+.custom-shadow {
+  text-shadow: 
+    4px 4px 5px rgba(30, 52, 69, 1);
+}
+
 
 .button:active {
   @apply scale-110;

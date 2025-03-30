@@ -1,7 +1,5 @@
 "use client"
 
-import InputBox from "@/components/InputBox";
-import Image from "next/image";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 

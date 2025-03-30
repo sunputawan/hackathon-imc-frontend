@@ -4,10 +4,11 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import SlidingChoice from './components/SlidingChoice';
 import Image from 'next/image';
 import { useFooter } from '@/components/FooterContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const Customize = () => {
+  const [selected, setSelected] = useState(0);
   const {setShowFooter} = useFooter();
       useEffect(() => {
           setShowFooter(false);
@@ -16,7 +17,7 @@ const Customize = () => {
   const searchParams = useSearchParams();
   const name = searchParams.get("name");
   const handleSubmit = () => {
-    // fetch POST the Avatar
+    // fetch POST the Avatar (selected)
 
 
     router.push("/new-account/path-select");
@@ -27,7 +28,10 @@ const Customize = () => {
         <h1 className='mt-20 text-5xl'>Hi, {name}</h1>
       </div>
       <div className='h-20'/>
-      <SlidingChoice />
+      <SlidingChoice 
+        selected={selected}
+        setSelected={setSelected}
+      />
       <div 
         className='button mt-10 w-40 text-center text-4xl p-3 mx-auto bg-custom-blue rounded-full'
         onClick={() => handleSubmit()}

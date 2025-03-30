@@ -82,7 +82,7 @@ const Gacha = () => {
                     spin to get your wearables
                 </div>
                 <button 
-                    className={`w-[60%] bg-custom-blue text-white text-5xl rounded-full py-4 
+                    className={`button w-[60%] bg-custom-blue text-white text-5xl rounded-full py-4 
                         ${isSpinning ? 'translate-y-20 opacity-0' : 'translate-y-0 opacity-100'}
                         transition-all duration-1000 ease-out`}
                         onClick={handleSpin}
